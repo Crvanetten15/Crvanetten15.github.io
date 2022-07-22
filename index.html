@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>DevConnor WebSite</title>
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <!-- THis irons out the differences in the browser-->
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous">
+        
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/325e9633e9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./CSS/style.css">
+        
+    </head>
+    <body>
+        <header id = "top">
+            <canvas class = "header_background" id="canvas"></canvas>
+            <div class="Logo">
+                <img src="ASSESTS/Untitled_Artwork (2).png" alt="" >
+            </div>
+
+            <button class = "navigate-toggle" aria-label= "toggle navigation">
+                <span class = "hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav__item"><a href="#top" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#lang" class="nav__link">My Languages</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Who I Am</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Experience</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- INTRODUCTION-->
+        <section class="intro" id = "home">
+            <h1 class = "section__title section__title--intro">
+            Hi, I am <strong>Connor Van Etten</strong>    
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Student Developer</p>
+            <img src="ASSESTS/IMG_3153 (2).png" alt="Connor Smiling" class="intro__img">
+        </section>
+
+        <!--My Languages-->
+        <section class="My--Languages" id = "lang">
+            <h2 class= "section__title section__subtitle--lang">Top Experiences</h2>
+            <div class = "Languages">    
+                <div class = "Language">
+                    <h3>Internship</h3>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                </div><!--END-->
+                
+                <div class = "Language">
+                    <h3>Python</h3>
+                    <p>  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                </div><!--END-->
+                
+                <div class = "Language">
+                    <h3>Javascript</h3>
+                    <p>    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                </div><!--END-->
+            </div>
+
+            <a href="#work" class="btn">My Work</a>
+
+        </section>
+
+        <section class = "About-me" id = "about">
+            <h2 class = "section__title section__title--about">Who I Am</h2>
+            <p class= "section__subtitle section__subtitle--about">Student Developer </p>
+
+            <div class = "About-me__body">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+
+            <img src="ASSESTS/goofstock.JPG" alt="A real pic of me" class="about-me__img" >
+        </section>
+
+        <section class = "My-work" id = "work">
+            <h2 class = "section__title section__title--work">My Work</h2>
+            <p class= "section__subtitle section__subtitle--work">A collection of my work</p>
+
+            <div class = "portfolio">
+                <a href="#" class="portfolio__item">
+                    <img src="ASSESTS/IMG_3153 (2).png" alt="project 1" class="portfolio__img">
+                </a><!--end of image-->
+
+                <a href="#" class="portfolio__item">
+                    <img src="ASSESTS/IMG_3153 (2).png" alt="project 5" class="portfolio__img">
+                </a><!--end of image-->
+
+                <a href="#" class="portfolio__item">
+                    <img src="ASSESTS/IMG_3153 (2).png" alt="project 6" class="portfolio__img">
+                </a><!--end of image-->
+            </div>
+
+            <!-- <img src="ASSESTS/MyProf.jpg" alt="A real pic of me"> -->
+        </section>
+
+
+
+        <footer class = "footer">
+            <a href="mailto:vanettencr@gmail.com" class= "Footer__link">vanettencr@gmail.com</a>
+            <ul class="social-list">
+                <li class = "social-list__item github">
+                    <a class="social-list__link"
+                    href="https://github.com/Crvanetten15">
+                    <i class="fa-brands fa-github-alt"></i>
+                </a>
+                </li>
+
+                <li class = "social-list__item linkedIn">
+                    <a class="social-list__link"
+                    href="https://www.linkedin.com/in/crvanetten/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                </li>
+
+
+            </ul>
+        </footer>
+        <script src="./index.js"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>
