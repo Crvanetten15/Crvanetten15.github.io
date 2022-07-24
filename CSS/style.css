@@ -15,10 +15,12 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
+    --clr-white: #FFFCFF;
     --clr-light: #FFFCFF;
     --clr-dark: #2f3e46;
-    --clr-accent: #cad2c5;
-    --clr-opposite: #84a98C;
+    --clr-opaque: #212124;
+    --clr-accent1: #cad2c5;
+    --clr-accent2: #84a98C;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -67,7 +69,7 @@ img{
 strong {font-weight: bold}
 
 :focus {
-    outline: 3px solid var(--clr-accent);
+    outline: 3px solid var(--clr-accent1);
     outline-offset: 3px;
 }
 
@@ -117,6 +119,7 @@ h3{
 
 .section__title--intro {
     font-weight: var(--fw-reg);
+    text-shadow:1px 1px 2px var(--clr-opaque);
 }
 
 .section__title--intro strong{
@@ -128,9 +131,13 @@ h3{
     font-size: var(--fs-h3);
 }
 
+.section__subtitle--intro{
+    text-shadow: 1px 1px 2px var(--clr-dark);
+}
+
 .section__subtitle--intro,
 .section__subtitle--about{
-    background: var(--clr-opposite);
+    background: var(--clr-accent2);
     color: #ffff;
     padding: .25em;
     font-family: var(--ff_secondary);
@@ -182,7 +189,9 @@ h3{
 }
 
 .nav__link:hover {
-    color: var(--clr-accent);
+    color: rgba(0,0,0,0.8);
+	text-shadow:1px 1px 2px var(--clr-opaque);
+
 }
 
 .nav-open .nav {
@@ -222,7 +231,7 @@ h3{
     padding: 0;
     width: 30px;
     height: 4px;
-    background-color: var(--clr-opposite);
+    background-color: var(--clr-accent2);
     display: block;
     border-radius: 4px;
     transition: all 0.4s ease-in-out;
@@ -303,10 +312,11 @@ h3{
     }
 }
 
-/* My languages section*/
+/* - - - - - - - - - - MY SPECIALITIES - - - - - - - - - -*/
 
-.My--Languages{
+.Specialities{
     background-color: var(--clr-dark);
+
     background-image: url(../ASSESTS/work-style-backdrop.jpg);
     background-size: cover;
     background-blend-mode: overlay; 
@@ -314,12 +324,13 @@ h3{
     text-align: center;
 }
 
-.section__subtitle--lang{
-    color: var(--clr-accent);
+.section__subtitle--spec{
+    color: var(--clr-accent1);
+    text-shadow:1px 1px 2px var(--clr-opaque);
     position: relative;
 }
 
-.section__subtitle--lang::after{
+.section__subtitle--spec::after{
     content: '';
     display: block;
     width: 25%;
@@ -329,24 +340,24 @@ h3{
     opacity: 0.25;
 } 
 
-.Languages {
+.specility-areas {
     margin-bottom: 4em;
 }
 
-.Language {
+.spec {
     max-width: 500px;
     margin: 0 auto;
 }
 
 @media (min-width: 800px){
-    .Languages{
+    .specility-areas{
         display: flex;
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .Language + .Language {
+    .spec + .spec {
         margin-left: 2em;
     }
 }
@@ -363,7 +374,7 @@ h3{
 }
 
 .about-me__img {
-    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);;
+    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 600px) {
@@ -407,7 +418,7 @@ h3{
 }
 
 .section__subtitle--work {
-    color: var(--clr-accent);
+    color: var(--clr-accent1);
     font-weight: var(--fw-bold);
     margin-bottom: 1em;
 }
@@ -419,7 +430,7 @@ h3{
 }
 
 .portfolio__item {
-    background-color: var(--clr-accent);
+    background-color: var(--clr-accent1);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -446,8 +457,8 @@ h3{
 /* FOOTER */
 
 .footer {
-    background: #111;
-    color: var(--clr-accent);
+    background: var(--clr-opaque);
+    color: var(--clr-accent1);
     text-align: center;
     padding: 2.5em 0;
     
@@ -463,17 +474,36 @@ h3{
     font-weight: var(--fw-bold);
 }
 
-.Footer__link:hover,
-.social-list__link:hover {
+.Footer__link:hover {
     filter: brightness(150%);
 }
 
+.social-list__link:hover {
+    color: var(--clr-opaque);
+    background-color: var(--clr-white);
+    border-radius: 15%;
+    width: 85px;
+}
+
+.github:hover, .linkedIn:hover {
+    overflow: hidden;
+    box-shadow: inset 0 0 0 rgba(255,255,255,0.3), 0 0 1.2em rgba(255,255,255,0.5);
+}
+
 .github {
-    color: #AE6FDA;
+    color: var(--clr-white);
+    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    background-color: var(--clr-dark);
+    border-radius: 15%;
+    width: 85px;
 }
 
 .linkedIn {
-    color: #004284;
+    color: var(--clr-white);
+    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    background-color: var(--clr-dark);
+    border-radius: 15%;
+    width: 85px;
 }
 
 .Footer__link:hover {

@@ -10,5 +10,6 @@ navToggle.addEventListener('click', () => {
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         document.body.classList.remove('nav-open');
+        document.getElementById("checkbox2").checked = false;
     });
 });

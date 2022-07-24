@@ -16,11 +16,11 @@ var mouse = {
 var maxRadius = 40;
 // var minRadius = 2;
 
-var colourArray = ['#091008', 
-                   '#1F2F23', 
-                   '#3E563E', 
-                   '#93A789', 
-                   '#7993A1',
+var colourArray = ['#FFFCFF', 
+                   '#2f3e46', 
+                   '#212124', 
+                   '#cad2c5', 
+                   '#84a98C',
                    '#CDD9DF'];
 
 // Listens to mouse movements
