@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 /*custom properties update for your own design*/
 :root{
     --ff-primary: 'Source Sans Pro', san-serif;
@@ -12,10 +14,10 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #ffff;
-    --clr-dark: #303030;
-    --clr-accent: #CED9DF;
-    --clr-opposite: #3E563E;
+    --clr-light: #FFFCFF;
+    --clr-dark: #2f3e46;
+    --clr-accent: #cad2c5;
+    --clr-opposite: #84a98C;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -48,6 +50,8 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 section {
     padding: 5em 2em;
@@ -180,63 +184,82 @@ h3{
 }
 
 /* HAMBURGER BUTTON */
+.visuallyHidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
 
-.navigate-toggle {
+.container {
     padding: .5em;
     background: transparent;
     border: 0;
-    cursor: pointer;
     position: fixed;
     right: 1em;
-    top: 1em;
-    z-index: 1000;
-}
-
-.nav-open .nav {
-    transform: translateX(0);
-}
-
-.nav-open .navigate-toggle {
-    position: fixed;
-}
-
-.nav-open .hamburger {
-    transform: rotate(90deg);
-}
-
-.nav-open .hamburger::before {
-    transform: rotate(90deg translateX(-6px));
-}
-
-.nav-open .hamburger::after {
-    opacity: 0;
+    top: -1em;
+    z-index: 5;
 }
 
 .hamburger {
-    display: block;
+    right: 0;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 30px;
+    height: 30px;
     position: relative;
 }
 
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    background: var(--clr-accent);
-    width: 2em;
-    height: 3px;
-    border-radius: 1em;
-    transform: transform 250ms ease-in-out;
+.hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: var(--clr-opposite);
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute; 
 }
 
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    position: absolute;
-    left: 0;
+.bar1 {
+    top: 0;
+}
+
+.bar2,
+.bar3 {
+    top: 13.5px;
+}
+
+.bar3 {
     right: 0;
 }
 
-.hamburger::before {top : 6px;}
-.hamburger::after {top : 6px;}
+.bar4 {
+    bottom: 0;
+}
+
+/* HAMBURGER 2 */
+
+.checkbox2:checked + label > .hamburger2 > .bar1{
+    transform: translateX(40px);
+    background-color: transparent;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar2{
+    transform: rotate(45deg);
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar3{
+    transform: rotate(-45deg);
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar4{
+    transform: translateX(-40px);
+    background-color: transparent;
+}
+
 
 /*  Intro Section   */
 

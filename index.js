@@ -1,4 +1,4 @@
-const navToggle = document.querySelector('.navigate-toggle');
+const navToggle = document.querySelector('.container');
 const navLinks = document.querySelectorAll('.nav__link');
 
 
