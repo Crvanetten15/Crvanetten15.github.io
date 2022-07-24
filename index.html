@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+        <title>Coding with Connor</title>
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <title>DevConnor WebSite</title>
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <!-- THis irons out the differences in the browser-->
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous">
         
+        <!-- This irons out the differences in the browser-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <!--Addition of Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous">
+        <!--Addition of Fonts-->
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
-
-        <script src="https://kit.fontawesome.com/325e9633e9.js" crossorigin="anonymous"></script>
+        <!--Linking CSS-->
         <link rel="stylesheet" href="./CSS/style.css">
-        
+
+        <!--Addition of Font Awesome-->
+        <script src="https://kit.fontawesome.com/325e9633e9.js" crossorigin="anonymous"></script>
     </head>
+    
     <body>
         <header id = "top">
+            <!--Particle Background-->
             <canvas class = "header_background" id="canvas"></canvas>
+            
+            <!--Top Left Logo-->
             <div class="Logo">
                 <img src="ASSESTS/LogoIdea.png" alt="" >
             </div>
 
-            <!-- <button class = "navigate-toggle" aria-label= "toggle navigation">
-                <span class = "hamburger"></span>
-            </button> -->
-            <!-- REMOVED BUTTON -->
+            <!--Hamburger Button-->
             <button class="container">
                 <input type="checkbox" id="checkbox2" class="checkbox2 visuallyHidden">
                 <label for="checkbox2">
@@ -40,49 +41,43 @@
                 </label>
             </button>
 
-
-
+            <!--Navigation List-->
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav__item"><a href="#top" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#lang" class="nav__link">My Languages</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">Who I Am</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Experience</a></li>
+                    <li class="nav__item Home_nav"><a href="#top" class="nav__link">Home</a></li>
+                    <li class="nav__item Special_nav"><a href="#areas" class="nav__link">Specialities</a></li>
+                    <li class="nav__item About-me_nav"><a href="#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item Projects_nav"><a href="#work" class="nav__link">Projects</a></li>
                 </ul>
             </nav>
-
-
-
-
         </header>
 
-        <!-- INTRODUCTION-->
-        
+        <!--Hello Section-->
         <section class="intro" id = "home">
             <h1 class = "section__title section__title--intro">
             Hi, I am <strong>Connor Van Etten</strong>    
             </h1>
             <p class="section__subtitle section__subtitle--intro">Student Developer</p>
-            <img src="ASSESTS/IMG_3153 (2).png" alt="Connor Smiling" class="intro__img">
+            <img src="ASSESTS/MemojiStock.png" alt="Connor Smiling" class="intro__img">
         </section>
 
         
 
-        <!--My Languages-->
-        <section class="My--Languages" id = "lang">
-            <h2 class= "section__title section__subtitle--lang">What I Do</h2>
-            <div class = "Languages">    
-                <div class = "Language">
+        <!--MY SPECIALITIES-->
+        <section class="Specialities" id = "areas">
+            <h2 class= "section__title section__subtitle--spec">What I Do</h2>
+            <div class = "specility-areas">    
+                <div class = "spec">
                     <h3>Student</h3>
                     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 </div><!--END-->
                 
-                <div class = "Language">
+                <div class = "spec">
                     <h3>Front-End Development</h3>
                     <p>  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 </div><!--END-->
                 
-                <div class = "Language">
+                <div class = "spec">
                     <h3>Cloud Development</h3>
                     <p>    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 </div><!--END-->
@@ -92,6 +87,7 @@
 
         </section>
 
+        <!--ABOUT ME SECTION-->
         <div class = "ext">
             <section class = "About-me" id = "about">
                 <h2 class = "section__title section__title--about">Who I Am</h2>
@@ -111,21 +107,22 @@
             </section>
         </div>
 
+        <!--PROJECTS SECTION-->
         <section class = "My-work" id = "work">
             <h2 class = "section__title section__title--work">What I've Done</h2>
             <p class= "section__subtitle section__subtitle--work">A collection of my work</p>
 
             <div class = "portfolio">
                 <a href="#" class="portfolio__item">
-                    <img src="ASSESTS/IMG_3153 (2).png" alt="project 1" class="portfolio__img">
+                    <img src="ASSESTS/trek10.png" alt="project 1" class="portfolio__img">
                 </a><!--end of image-->
 
                 <a href="#" class="portfolio__item">
-                    <img src="ASSESTS/IMG_3153 (2).png" alt="project 5" class="portfolio__img">
+                    <img src="ASSESTS/trek10.png" alt="project 5" class="portfolio__img">
                 </a><!--end of image-->
 
                 <a href="#" class="portfolio__item">
-                    <img src="ASSESTS/IMG_3153 (2).png" alt="project 6" class="portfolio__img">
+                    <img src="ASSESTS/trek10.png" alt="project 6" class="portfolio__img">
                 </a><!--end of image-->
             </div>
 
@@ -133,7 +130,7 @@
         </section>
 
 
-
+        <!--Footer-->
         <footer class = "footer">
             <a href="mailto:vanettencr@gmail.com" class= "Footer__link">vanettencr@gmail.com</a>
             <ul class="social-list">
@@ -150,11 +147,11 @@
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
                 </li>
-
-
             </ul>
         </footer>
-        <script src="./index.js"></script>
-        <script src="./script.js"></script>
+        
+        <!--SCRIPTS NEEDED TO ADD-->
+        <script src="./JS/index.js"></script>
+        <script src="./JS/script.js"></script>
     </body>
 </html>
