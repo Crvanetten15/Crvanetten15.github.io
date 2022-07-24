@@ -6,6 +6,7 @@
 
 
 
+
 /*custom properties update for your own design*/
 :root{
     --ff-primary: 'Source Sans Pro', san-serif;
@@ -351,11 +352,14 @@ h3{
 }
 
 /*About me*/
+.ext {
+    background: var(--clr-light);
+}
 
 .About-me {
     max-width: 1000px;
     margin: 0 auto;
-    background-color: #FFFFFF;
+    background-color: var(--clr-light);
 }
 
 .about-me__img {
