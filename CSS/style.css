@@ -307,7 +307,7 @@ h3{
 
 .My--Languages{
     background-color: var(--clr-dark);
-    background-image: url(../ASSESTS/languages-backdrop.jpg);
+    background-image: url(../ASSESTS/work-style-backdrop.jpg);
     background-size: cover;
     background-blend-mode: overlay; 
     color: var(--clr-light);
