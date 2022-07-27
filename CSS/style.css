@@ -15,12 +15,12 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-white: #FFFCFF;
+    --clr-white: #FFFFFF;
     --clr-light: #FFFCFF;
-    --clr-dark: #2f3e46;
+    --clr-dark: #212124;
     --clr-opaque: #212124;
     --clr-accent1: #cad2c5;
-    --clr-accent2: #84a98C;
+    --clr-accent2: #212124;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -47,7 +47,7 @@ html {
 }
 
 body {
-    background: var(--clr-light);
+    background: var(--clr-white);
     color: var(--clr-dark);
     margin: 0;
     font-family: var(--ff-primary);
@@ -71,31 +71,6 @@ strong {font-weight: bold}
 :focus {
     outline: 3px solid var(--clr-accent1);
     outline-offset: 3px;
-}
-
-/*BUTTON*/
-
-.btn {
-    display: inline-block;
-	color: rgba(255,255,255,1);
-	background: none;
-    text-decoration: none;
-	border-radius: 0;
-	padding: 1.2em 5em;
-	letter-spacing: 0.35em;
-	font-size: 0.7em;
-    font-family: var(--ff_secondary);
-    font-weight: var(--fw-bold);
-	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-	margin: 1em;
-    box-shadow: inset 0 0 0.8em rgba(255,255,255,0.3), 0 0 0.8em rgba(255,255,255,0.3);
-	border: #fff solid 2px;
-}
-
-.btn:hover {
-    color: rgba(0,0,0,0.8);
-	background-color: #fff;
-	box-shadow: inset 0 0 0 rgba(255,255,255,0.3), 0 0 1.2em rgba(255,255,255,0.5);
 }
 
 
@@ -312,7 +287,7 @@ h3{
     }
 }
 
-/* - - - - - - - - - - MY SPECIALITIES - - - - - - - - - -*/
+/* - - - - - - - - - - Grid Setup - - - - - - - - - -*/
 
 .highlight_section{
     background-color: var(--clr-white);
@@ -334,11 +309,23 @@ h3{
 .grid-item {
     color: #212124;
     background-color: #fff;
-    border: red 2px;
-    border-style: solid;
+    /* border: red 2px;
+    border-style: solid; */
     min-width: 400px;
     min-height: 400px;
     position: relative;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
+.grid-item:hover {
+    opacity: 50%;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 rgba(255,255,255,0.3), 0 0 1.2em rgba(255,255,255,0.5);
+}
+
+.grid1, .grid2, .grid3, .grid6 {
+    min-width: 800px;
 }
 
 .inner-box{
@@ -352,26 +339,86 @@ h3{
     rotate: 45deg;
 }
 
+.left {
+    background: var(--clr-white);
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    left: 8px;
+    bottom: 40%;
+    rotate: 45deg;
+}
+
+.inner-box-vert{
+    background: var(--clr-white);
+    height: 2em;
+    width: 2em;
+    position: absolute;
+    top: -18px;
+    right: calc(90% / 2);
+    rotate: 45deg;
+}
+
 .div-h {
     flex:1;
     position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+.div-v {
+    display: inline-block;
+    position: relative;
+    height: 100%;
 }
 
 .inner-format {
-    border: red 2px;
-    border-style: solid;
+    /* border: red 2px;
+    border-style: solid; */
     height: 100%;
     display: flex;
     flex: 1;
 }
 
-.inner-img {
-    background-image: url(../ASSESTS/work-style-backdrop.jpg);
+.inner-format-v {
+    /* border: red 2px;
+    border-style: solid; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-basis: 1;
+}
+
+.inner-img, .inner-img-1, .inner-img-3, .inner-img-4, .inner-img-6  {
     background-size: cover;
-    background-blend-mode:overlay;
-    background-color: var(--clr-dark);
     width: 50%;
-    
+}
+
+.bottom1, .bottom2 {
+    width: 100%;
+    height: 100%;
+}
+
+.bottom1 {
+    background-image: url(../ASSESTS/stocks/stock1.jpg);
+}
+
+.bottom2 {
+    background-image: url(../ASSESTS/stocks/stock2.jpg);
+}
+
+.inner-img-1 {
+    background-image: url(../ASSESTS/stocks/stock3.jpg);
+}
+.inner-img-3 {
+    background-image: url(../ASSESTS/stocks/stock4.jpg);
+}
+.inner-img-4 {
+    background-image: url(../ASSESTS/stocks/stock5.jpg);
+}
+.inner-img-6 {
+    background-image: url(../ASSESTS/stocks/stock6.jpg);
 }
 
 .grid1 {
