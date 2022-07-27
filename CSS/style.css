@@ -6,13 +6,12 @@
 
 
 
-
 /*custom properties update for your own design*/
 :root{
-    --ff-primary: 'Source Sans Pro', san-serif;
+    --ff-primary: 'Monterssat', montserrat;
     --ff_secondary: 'Source Code Pro', monospace;
 
-    --fw-reg: 300;
+    --fw-reg: 500;
     --fw-bold: 900;
 
     --clr-white: #FFFFFF;
@@ -35,7 +34,7 @@
 @media (min-width: 800px){
     :root{
         --fs-h1: 4.75rem;
-        --fs-h2: 3.75rem;
+        --fs-h2: 2.75rem;
         --fs-h3: 1.5;
         --fs-body: 1.125rem;
     }
@@ -55,7 +54,10 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    height: 100vh;
+
 }
+
 section {
     padding: 5em 2em;
 }
@@ -71,6 +73,10 @@ strong {font-weight: bold}
 :focus {
     outline: 3px solid var(--clr-accent1);
     outline-offset: 3px;
+}
+
+.header_p {
+    width: 60ch;
 }
 
 
@@ -110,155 +116,48 @@ h3{
     text-shadow: 1px 1px 2px var(--clr-dark);
 }
 
-.section__subtitle--intro,
-.section__subtitle--about{
-    background: var(--clr-accent2);
-    color: #ffff;
-    padding: .25em;
-    font-family: var(--ff_secondary);
-    margin-bottom: 1em;
-    
-}
-/* Header */
-.header {
+/* START OF HEADER */
+.topping {
+    background: #fff;
+    position: fixed;
+    z-index: 10;
+    padding-bottom: 1px;
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    padding: 1em;
+    margin-bottom: 0;
 }
+
+.pages {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.pages > * {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    color: inherit;
+    text-decoration: none;
+    margin-right: 5%;
+}
+
+.pages > *:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 
 .Logo {
-    max-width: 100px;
+    width: 100px;
     padding-top: 12px;
+    margin-right: 60%;
 }
 
-.nav {
-    position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-light);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 3;
-
-    transform: translateY(-100%);
-    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-.nav__link {
-    color: inherit;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-h2);
-    text-decoration: none;
-}
-
-.nav__link:hover {
-    color: rgba(0,0,0,0.8);
-	text-shadow:1px 1px 2px var(--clr-opaque);
-
-}
-
-.nav-open .nav {
-    transform: translateY(0);
-}
-
-/* HAMBURGER BUTTON */
-.visuallyHidden {
-    position: absolute; 
-    overflow: hidden; 
-    clip: rect(0 0 0 0); 
-    height: 1px; width: 1px; 
-    margin: -1px; padding: 0; border: 0; 
-}
-
-.container {
-    padding: .5em;
-    background: transparent;
-    border: 0;
-    position: fixed;
-    right: 1em;
-    top: -1em;
-    z-index: 5;
-}
-
-.hamburger {
-    right: 0;
-    cursor: pointer;
-    margin: 0 auto;
-    margin-top: 30px;
-    width: 30px;
-    height: 30px;
-    position: relative;
-}
-
-.hamburger .bar {
-    padding: 0;
-    width: 30px;
-    height: 4px;
-    background-color: var(--clr-accent2);
-    display: block;
-    border-radius: 4px;
-    transition: all 0.4s ease-in-out;
-    position: absolute; 
-}
-
-.bar1 {
-    top: 0;
-}
-
-.bar2,
-.bar3 {
-    top: 13.5px;
-}
-
-.bar3 {
-    right: 0;
-}
-
-.bar4 {
-    bottom: 0;
-}
-
-/* HAMBURGER 2 */
-
-.checkbox2:checked + label > .hamburger2 > .bar1{
-    transform: translateX(40px);
-    background-color: transparent;
-}
-
-.checkbox2:checked + label > .hamburger2 > .bar2{
-    transform: rotate(45deg);
-}
-
-.checkbox2:checked + label > .hamburger2 > .bar3{
-    transform: rotate(-45deg);
-}
-
-.checkbox2:checked + label > .hamburger2 > .bar4{
-    transform: translateX(-40px);
-    background-color: transparent;
-}
-
-
-/*  Intro Section   */
+/* END OF HEADER */
 
 .intro {
     position: relative;
-}
-
-.intro__img{
-    box-shadow: var(--bs);
 }
 
 @media (min-width: 600px) {
@@ -296,6 +195,7 @@ h3{
     text-align: center;
     max-width: 1400px;
     margin:auto;
+
 }
 
 .highlights {
@@ -309,31 +209,31 @@ h3{
 .grid-item {
     color: #212124;
     background-color: #fff;
-    /* border: red 2px;
-    border-style: solid; */
     min-width: 400px;
     min-height: 400px;
     position: relative;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
+    opacity: 75%;
 }
 
 .grid-item:hover {
-    opacity: 50%;
+    opacity: 150%;
     overflow: hidden;
     box-shadow: inset 0 0 0 rgba(255,255,255,0.3), 0 0 1.2em rgba(255,255,255,0.5);
 }
 
 .grid1, .grid2, .grid3, .grid6 {
     min-width: 800px;
+    min-height: 400px;
 }
 
 .inner-box{
-    background: var(--clr-light);
+    background: var(--clr-light); 
     height: 2em;
     width: 2em;
     position: absolute;
-    left: 100%;
+    right: -43px;
     transform: translateX(-100%);
     bottom: 40%;
     rotate: 45deg;
@@ -359,11 +259,24 @@ h3{
     rotate: 45deg;
 }
 
+.heading-d, .heading-v {
+    font-size: var(--fs-h2);
+    color: #313131;
+    text-shadow:1px 1px 2px #1c1c1c;
+}
+
+
 .div-h {
     flex:1;
     position: relative;
-    text-align: center;
-    align-items: center;
+    color: #232323;
+    padding-bottom: 10%;
+    font-weight: var(--fw-reg);
+}
+
+.inner-p {
+    width: 30ch;
+    margin: auto;
 }
 
 .div-v {
@@ -373,16 +286,12 @@ h3{
 }
 
 .inner-format {
-    /* border: red 2px;
-    border-style: solid; */
     height: 100%;
     display: flex;
     flex: 1;
 }
 
 .inner-format-v {
-    /* border: red 2px;
-    border-style: solid; */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -418,7 +327,7 @@ h3{
     background-image: url(../ASSESTS/stocks/stock5.jpg);
 }
 .inner-img-6 {
-    background-image: url(../ASSESTS/stocks/stock6.jpg);
+    background-image: url(../ASSESTS/stocks/comingsoon.jpg);
 }
 
 .grid1 {
@@ -554,18 +463,9 @@ h3{
 
 
 
-/* Graphics for behind Header */
-#canvas {
-    border: 1px solid black;
-}
 
-.header_background {
-    z-index: -2;
-    position: fixed;
-}
 
 /*! Current position in video stage 17*/
-
 
 
 
