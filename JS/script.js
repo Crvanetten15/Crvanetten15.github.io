@@ -17,11 +17,11 @@ var maxRadius = 40;
 // var minRadius = 2;
 
 var colourArray = ['#FFFCFF', 
-                   '#2f3e46', 
-                   '#212124', 
-                   '#cad2c5', 
-                   '#84a98C',
-                   '#CDD9DF'];
+                   '#031019', 
+                   '#000001', 
+                   '#2A465C', 
+                   '#316C92',
+                   '#8D9EA5'];
 
 // Listens to mouse movements
 window.addEventListener('mousemove', function (event) {

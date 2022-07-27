@@ -13,32 +13,59 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-        
         <!--Linking CSS-->
-        <link rel = "stylesheet" href="./CSS/comingsoon.css">
+        <link rel="stylesheet" href="./CSS/comingsoon.css">
 
         <!--Addition of Font Awesome-->
         <script src="https://kit.fontawesome.com/325e9633e9.js" crossorigin="anonymous"></script>
     </head>
     
-    <body>
-        <header class = "topper">            
-            <div class="cslogo"><img src = "./ASSESTS/LogoIdea.png"></div>
-            <div class = "links">
-                <a class = "link-home" href="index.html">Home</a>
-                <a class = "link-about" href="./comingsoon.html">About</a>
-                <a class = "link-projects" href="./comingsoon.html">Projects</a>
-                <a class = "link-contact" href="./comingsoon.html">Contact</a>
+    <body class = "wrapper">
+        <header class = "topping">            
+            <div class="Logo"><img src = "ASSESTS/LogoIdea.png"></div>
+            <div class = "pages">
+                <a class = "top-home" href="index.html">Home</a>
+                <a class = "top-about" href="./comingsoon.html">About</a>
+                <a class = "top-projects" href="./comingsoon.html">Projects</a>
+                <a class = "top-contact" href="./comingsoon.html">Contact</a>
             </div>
         </header>
 
+
+
+        <!--Hello Section-->
+        <section class="intro" id = "top">
+            <div class = "message">
+            <h2 class = "section__title section__title--intro">
+            Unfortunately content is not in production.<strong>Coming Soon</strong>    
+            </h2>
+            <p class = "header_p">Enjoy the particles or return to home!</p>
+        </div>
+        </section>
+
         <canvas class = "header_background" id="canvas"></canvas>
-    
-        <div class="message">
-        <p class = "section__title section__title--intro">
-        Unfortunately this work is in development <br><strong>Coming Soon!</strong>    
-        </p>
-    </div>
+
+        <!--Footer-->
+        <footer class = "footer">
+            <a href="mailto:vanettencr@gmail.com" class= "Footer__link">vanettencr@gmail.com</a>
+            <ul class="social-list">
+                <li class = "social-list__item github">
+                    <a class="social-list__link"
+                    href="https://github.com/Crvanetten15">
+                    <i class="fa-brands fa-github-alt"></i>
+                </a>
+                </li>
+
+                <li class = "social-list__item linkedIn">
+                    <a class="social-list__link"
+                    href="https://www.linkedin.com/in/crvanetten/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                </li>
+            </ul>
+        </footer>
+        
+        <!--SCRIPTS NEEDED TO ADD-->
         <script src="./JS/script.js"></script>
     </body>
 </html>
