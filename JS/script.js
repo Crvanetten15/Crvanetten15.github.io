@@ -96,7 +96,7 @@ function Circle(x, y, dx, dy, radius) {
 }
 
 var circleArray = [];
-var totalCircles = 999;
+var totalCircles = 150;
 
 const init = () => {
   circleArray = [];
