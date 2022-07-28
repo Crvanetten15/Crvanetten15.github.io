@@ -76,9 +76,8 @@ strong {font-weight: bold}
 }
 
 .header_p {
-    width: 100%;
-    color: #fff;
-    background: #1c1c1c;
+    width: 40ch;
+    color: #1c1c1c;
 
 }
 
@@ -474,7 +473,6 @@ canvas {
     position: fixed;
     z-index: -10;
     top: 0;
-
 }
 
 
