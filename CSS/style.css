@@ -5,7 +5,10 @@
 }
 
 
-
+a {
+    text-decoration: none;
+    color: #212124;
+}
 /*custom properties update for your own design*/
 :root{
     --ff-primary: 'Monterssat', montserrat;
@@ -157,13 +160,14 @@ h3{
     width: 100px;
     padding-top: 12px;
     margin-right: 60%;
+    min-width: 60px;
 }
 
 /* END OF HEADER */
 
 .intro {
     position: relative;
-    padding: 350px 0 350px 0;
+    padding: 350px 0 275px 0;
 }
 
 @media (min-width: 600px) {
@@ -191,6 +195,39 @@ h3{
         width: calc(100% + 1.5em);
     }
 }
+
+/* - - - - - - - - - - Scroll Prompt - - - - - - - - - -*/
+
+
+.prompt {
+    margin:auto; 
+}
+
+.prompt_text {
+    margin: auto;
+    text-align: center;
+}
+
+.arrow {
+    background: #313131;
+    width: 10px;
+    height: 25px;
+    border-radius: 10px     10px      0           0;
+    position: relative;
+    margin: auto;
+}
+
+.right_arrow {
+    rotate: 45deg;
+    left: 20px;
+}
+
+.left_arrow {
+    rotate: 315deg;
+}
+
+
+
 
 /* - - - - - - - - - - Grid Setup - - - - - - - - - -*/
 
