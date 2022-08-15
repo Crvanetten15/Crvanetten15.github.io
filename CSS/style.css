@@ -137,6 +137,7 @@ h3{
     width: 100%;
     justify-content: space-between;
     margin-bottom: 0;
+    height: 100px;
 }
 
 .pages {
@@ -153,9 +154,20 @@ h3{
     margin-right: 5%;
 }
 
-.pages > *:hover {
-    text-decoration: underline;
-    font-weight: bold;
+
+.marker {
+    height: 10px;
+    width: 10px;
+    position: relative;
+    margin:  0 auto  0 auto;
+    top: -22px;
+    border-radius: 50%;
+    background-color: #D6E2E9;
+    display: none;
+}
+
+.pages > *:hover > *{
+    display: block;
 }
 
 
@@ -520,8 +532,65 @@ canvas {
 
 /*! Current position in video stage 17*/
 
+.skills_section {
+    
+}
 
 
+.skill {
+    color: white;
+    padding: 0;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5em;
+    
+  }
+
+  .python:hover {
+    color: #417FB0;
+    transform: scale(1);
+  }
+
+  .java:hover {
+    color: #F0931C;
+    transform: scale(1);
+  }
+
+  .jslogo:hover {
+    color: #EFD81D;
+    transform: scale(1);
+  }
+
+  .aws:hover {
+    color: #F79400;
+    transform: scale(1);
+  }
+
+  .csslogo:hover {
+    color: #1E6EAF;
+    transform: scale(1);
+  }
+
+  .gitlogo:hover {
+    color: #E94E31;
+    transform: scale(1);
+  }
+
+  .skills {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+
+@media (min-width: 600px) {
+    .skills { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+    .skills { grid-template-columns: repeat(3, 1fr); }
+}
 
 
 
